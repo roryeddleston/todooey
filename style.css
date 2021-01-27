@@ -1,0 +1,146 @@
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(120deg, #054068, #2cb4cc);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+:root {
+    --primary-color: #366381;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+h1 {
+    padding: 1rem 2rem;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+
+header, form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: .5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button {
+    color: var(--primary-color);
+    background: white;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+form button:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 35%;
+    list-style: none;
+}
+
+.todo-input {
+    max-width: 40vw;
+}
+
+.todo {
+    margin: .5rem;
+    background: white;
+    color: var(--primary-color);
+    font-size: 1,5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.delete-btn, .complete-btn {
+    background: #c2593c;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn {
+    background: rgb(19, 156, 72);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(180deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: var(--primary-color);
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden; 
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: var(--primary-color);
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after{
+    background: white;
+    color: var(--primary-color);
+}
